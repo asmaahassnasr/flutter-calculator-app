@@ -8,6 +8,9 @@ class CalculatorScreen extends StatefulWidget {
 class _CalculatorScreenState extends State<CalculatorScreen> {
 
   bool isMAle = true;
+  int age = 10;
+  int weight= 40;
+  double sliderHeight = 120.0;
 
   @override
   Widget build(BuildContext context) {
@@ -125,7 +128,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
-                          '180',
+                          '${sliderHeight.round()}',
                           style: TextStyle(
                             fontSize: 45.0,
                             fontWeight: FontWeight.w900,
@@ -144,11 +147,13 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                       ],
                     ),
                     Slider(
-                        value:120 ,
+                        value:sliderHeight ,
                         max: 250.0,
                         min: 80.0,
                         onChanged: (value){
-                          print(value.round());
+                          setState(() {
+                            sliderHeight=value;
+                          });
                         },
                     ),
                   ],
@@ -178,7 +183,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                             ),
                           ),
                           Text(
-                            '180',
+                            '${age}',
                             style: TextStyle(
                               fontSize: 45.0,
                               fontWeight: FontWeight.w900,
@@ -188,14 +193,22 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               FloatingActionButton(
-                                onPressed: (){},
+                                onPressed: (){
+                                  setState(() {
+                                    age--;
+                                  });
+                                },
                                 mini: true,
                                 child: Icon(
                                   Icons.remove,
                                 ),
                               ),
                               FloatingActionButton(
-                                onPressed: (){},
+                                onPressed: (){
+                                  setState(() {
+                                    age++;
+                                  });
+                                },
                                 mini: true,
                                 child: Icon(
                                   Icons.add,
@@ -220,14 +233,14 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
-                            'AGE',
+                            'WEIGHT',
                             style: TextStyle(
                               fontSize: 25.0,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
                           Text(
-                            '180',
+                            '${weight}',
                             style: TextStyle(
                               fontSize: 45.0,
                               fontWeight: FontWeight.w900,
@@ -237,14 +250,22 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               FloatingActionButton(
-                                onPressed: (){},
+                                onPressed: (){
+                                  setState(() {
+                                    weight--;
+                                  });
+                                },
                                 mini: true,
                                 child: Icon(
                                   Icons.remove,
                                 ),
                               ),
                               FloatingActionButton(
-                                onPressed: (){},
+                                onPressed: (){
+                                  setState(() {
+                                    weight++;
+                                  });
+                                },
                                 mini: true,
                                 child: Icon(
                                   Icons.add,
