@@ -6,6 +6,9 @@ class CalculatorScreen extends StatefulWidget {
 }
 
 class _CalculatorScreenState extends State<CalculatorScreen> {
+
+  bool isMAle = true;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,30 +25,37 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
               child: Row(
                 children: [
                   Expanded(
-                    child: Container(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                           Image(
-                               image:AssetImage('assets/images/male.png'),
-                             height: 100.0,
-                             width: 100.0,
-                           ),
-                          SizedBox(
-                            height: 10.0,
-                          ),
-                          Text(
-                            'MALE',
-                            style: TextStyle(
-                              fontSize: 25.0,
-                              fontWeight: FontWeight.bold,
+                    child: GestureDetector(
+                      onTap: (){
+                        setState(() {
+                          isMAle =true;
+                        });
+                      },
+                      child: Container(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                             Image(
+                                 image:AssetImage('assets/images/male.png'),
+                               height: 100.0,
+                               width: 100.0,
+                             ),
+                            SizedBox(
+                              height: 10.0,
                             ),
-                          ),
-                        ],
-                      ),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10.0),
-                        color: Colors.grey
+                            Text(
+                              'MALE',
+                              style: TextStyle(
+                                fontSize: 25.0,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
+                        ),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10.0),
+                          color: isMAle? Colors.blue: Colors.grey[400],
+                        ),
                       ),
                     ),
                   ),
@@ -53,30 +63,37 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                     width: 20.0,
                   ),
                   Expanded(
-                    child: Container(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Image(
-                            image:AssetImage('assets/images/female.png'),
-                            height: 100.0,
-                            width: 100.0,
-                          ),
-                          SizedBox(
-                            height: 10.0,
-                          ),
-                          Text(
-                            'FEMALE',
-                            style: TextStyle(
-                              fontSize: 25.0,
-                              fontWeight: FontWeight.bold,
+                    child: GestureDetector(
+                      onTap: (){
+                        setState(() {
+                          isMAle = false;
+                        });
+                      },
+                      child: Container(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Image(
+                              image:AssetImage('assets/images/female.png'),
+                              height: 100.0,
+                              width: 100.0,
                             ),
-                          ),
-                        ],
-                      ),
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10.0),
-                          color: Colors.grey
+                            SizedBox(
+                              height: 10.0,
+                            ),
+                            Text(
+                              'FEMALE',
+                              style: TextStyle(
+                                fontSize: 25.0,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
+                        ),
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10.0),
+                            color: isMAle?Colors.grey: Colors.blue,
+                        ),
                       ),
                     ),
                   ),
