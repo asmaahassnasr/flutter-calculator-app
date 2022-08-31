@@ -95,7 +95,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                         ),
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10.0),
-                            color: isMAle?Colors.grey: Colors.blue,
+                            color: isMAle?Colors.grey[400]: Colors.blue,
                         ),
                       ),
                     ),
@@ -160,7 +160,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                 ),
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10.0),
-                    color: Colors.grey
+                    color: Colors.grey[400],
                 ),
               ),
             ),
@@ -220,7 +220,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                       ),
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10.0),
-                          color: Colors.grey
+                          color: Colors.grey[400],
                       ),
                     ),
                   ),
@@ -277,7 +277,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                       ),
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10.0),
-                          color: Colors.grey
+                          color: Colors.grey[400]
                       ),
                     ),
                   ),
