@@ -202,6 +202,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                                     age--;
                                   });
                                 },
+                                heroTag: 'age-',
                                 mini: true,
                                 child: Icon(
                                   Icons.remove,
@@ -213,6 +214,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                                     age++;
                                   });
                                 },
+                                heroTag: 'age+',
                                 mini: true,
                                 child: Icon(
                                   Icons.add,
@@ -259,6 +261,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                                     weight--;
                                   });
                                 },
+                                heroTag: 'weight-',
                                 mini: true,
                                 child: Icon(
                                   Icons.remove,
@@ -270,6 +273,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                                     weight++;
                                   });
                                 },
+                                heroTag: 'weight+',
                                 mini: true,
                                 child: Icon(
                                   Icons.add,
