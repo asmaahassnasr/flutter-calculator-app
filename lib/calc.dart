@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 class CalculatorScreen extends StatefulWidget {
@@ -289,7 +291,10 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
             width: double.infinity,
             color: Colors.red,
             child: MaterialButton(
-                onPressed: (){},
+                onPressed: (){
+                  var result = weight / pow(sliderHeight/100,2);
+                  
+                },
               height: 60.0,
               child: Text(
                 'CALCULATE',
