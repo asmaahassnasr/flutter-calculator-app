@@ -26,10 +26,11 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                           Icon(
-                            Icons.account_circle,
-                            size: 70.0,
-                          ),
+                           Image(
+                               image:AssetImage('assets/images/male.png'),
+                             height: 100.0,
+                             width: 100.0,
+                           ),
                           SizedBox(
                             height: 10.0,
                           ),
@@ -56,15 +57,16 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Icon(
-                            Icons.account_circle,
-                            size: 70.0,
+                          Image(
+                            image:AssetImage('assets/images/female.png'),
+                            height: 100.0,
+                            width: 100.0,
                           ),
                           SizedBox(
                             height: 10.0,
                           ),
                           Text(
-                            'MALE',
+                            'FEMALE',
                             style: TextStyle(
                               fontSize: 25.0,
                               fontWeight: FontWeight.bold,
