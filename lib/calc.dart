@@ -2,6 +2,8 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
+import 'calc_result.dart';
+
 class CalculatorScreen extends StatefulWidget {
   @override
   State<CalculatorScreen> createState() => _CalculatorScreenState();
@@ -293,7 +295,12 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
             child: MaterialButton(
                 onPressed: (){
                   var result = weight / pow(sliderHeight/100,2);
-                  
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => CalcResultScreen(),
+                      ),
+                  );
                 },
               height: 60.0,
               child: Text(
