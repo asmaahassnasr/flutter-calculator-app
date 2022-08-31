@@ -142,9 +142,107 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
             ),
           ),
           Expanded(
-            child: Container(
-              width: double.infinity,
-              color: Colors.blue,
+            child: Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: Container(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            'AGE',
+                            style: TextStyle(
+                              fontSize: 25.0,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          Text(
+                            '180',
+                            style: TextStyle(
+                              fontSize: 45.0,
+                              fontWeight: FontWeight.w900,
+                            ),
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              FloatingActionButton(
+                                onPressed: (){},
+                                mini: true,
+                                child: Icon(
+                                  Icons.remove,
+                                ),
+                              ),
+                              FloatingActionButton(
+                                onPressed: (){},
+                                mini: true,
+                                child: Icon(
+                                  Icons.add,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10.0),
+                          color: Colors.grey
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    width: 20.0,
+                  ),
+                  Expanded(
+                    child: Container(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            'AGE',
+                            style: TextStyle(
+                              fontSize: 25.0,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          Text(
+                            '180',
+                            style: TextStyle(
+                              fontSize: 45.0,
+                              fontWeight: FontWeight.w900,
+                            ),
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              FloatingActionButton(
+                                onPressed: (){},
+                                mini: true,
+                                child: Icon(
+                                  Icons.remove,
+                                ),
+                              ),
+                              FloatingActionButton(
+                                onPressed: (){},
+                                mini: true,
+                                child: Icon(
+                                  Icons.add,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10.0),
+                          color: Colors.grey
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
           Container(
