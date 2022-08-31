@@ -302,7 +302,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => CalcResultScreen(),
+                          builder: (context) => CalcResultScreen(result:result,isMAle: this.isMAle,age: this.age,),
                       ),
                   );
                 },
